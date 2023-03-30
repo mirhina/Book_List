@@ -8,12 +8,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class BookDao {
-@Autowired
-SqlSessionTemplate sqlSessionTemplate;
-
-public int insert(Map<String, Object> map) {
-	return this.sqlSessionTemplate.insert("book.insert", map);
+ @Autowired
+ SqlSessionTemplate sqlSessionTemplate;
+ 
+ public int insert(Map<String, Object> map) {
+	  return this.sqlSessionTemplate.insert("book.insert", map);
+	}
 }
-
-}
-
